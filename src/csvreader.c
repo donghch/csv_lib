@@ -6,7 +6,8 @@
  * Email: dieshenke@gmail.com
  * Date: Oct 20 2022
 */
-#include "csvreader.h";
+#include <stdio.h>
+#include "csvreader.h"
 
 int getwidth(FILE fileHandle) {
     return -1;
