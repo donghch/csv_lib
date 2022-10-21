@@ -1,10 +1,7 @@
 name: Start Tests
 on: push
 
-permissions:
-  checks: write
-  actions: read
-  contents: read
+permissions: read-all | write-all
 
 jobs:
   test_job:
