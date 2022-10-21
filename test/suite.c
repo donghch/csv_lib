@@ -4,7 +4,7 @@
 
 void getLengthTest(CuTest* tc) {
     
-    FILE* handle = fopen("../examples/studentData/stu.csv", "r");
+    FILE* handle = fopen("examples/studentData/stu.csv", "r");
     CuAssertPtrNotNull(tc, handle);
     CuAssertIntEquals(tc, 5, getLength(handle));
 
@@ -12,9 +12,10 @@ void getLengthTest(CuTest* tc) {
 
 void getWidthTest(CuTest* tc) {
 
-    FILE* handle = fopen("../examples/studentData/stu.csv", "r");
+    FILE* handle = fopen("examples/studentData/stu.csv", "r");
     CuAssertPtrNotNull(tc, handle);
     CuAssertIntEquals(tc, 3, getWidth(handle));
+
 }
 
 CuSuite* getAllTests() {
@@ -23,4 +24,5 @@ CuSuite* getAllTests() {
     SUITE_ADD_TEST(suite, getLengthTest);
     SUITE_ADD_TEST(suite, getLengthTest);
     return suite;
+
 }
