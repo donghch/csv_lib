@@ -17,7 +17,7 @@
  * Requires:    A valid csv file defined by RFC4180 standard.
  * Returns:     The data width of the file.
 */
-int getwidth(FILE fileHandle);
+int getWidth(FILE* fileHandle);
 
 /**
  * getlength
@@ -26,4 +26,4 @@ int getwidth(FILE fileHandle);
  * Requires:    A valid csv file defined by RFC4180 standard.
  * Returns:     The length of the file
 */
-int getlength(FILE fileHandle);
+int getLength(FILE* fileHandle);

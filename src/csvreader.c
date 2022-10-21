@@ -9,10 +9,39 @@
 #include <stdio.h>
 #include "csvreader.h"
 
-int getwidth(FILE fileHandle) {
-    return -1;
+int getWidth(FILE* fileHandle) {
+    
+    FILE* handle  = fileHandle;
+    int columnCount = 0;
+    int quoteCount = 0;
+    char c;
+
+    while ((c = fgetc(handle)) != '\n') {
+
+        if (c == '\'' || c == '\"') {
+            quoteCount++;
+        } else if (c == ',' && (quoteCount % 2) == 0) {
+            quoteCount++;
+        }
+
+    }
+
+    return ++quoteCount;
+
 }
 
-int getlength(FILE fileHandle) {
-    return -1;
+int getLength(FILE* fileHandle) {
+    
+    FILE* handle = fileHandle;
+    int lineCount = 0;
+    char c;
+    while ((c = fgetc(handle)) != EOF) {
+
+        if (c == '\n') 
+            lineCount++;
+
+    }
+
+    return lineCount;
+
 }
