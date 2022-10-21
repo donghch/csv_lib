@@ -17,13 +17,11 @@ int getWidth(FILE* fileHandle) {
     char c;
 
     while ((c = fgetc(handle)) != '\n') {
-
         if (c == '\'' || c == '\"') {
             quoteCount++;
         } else if (c == ',' && (quoteCount % 2) == 0) {
             quoteCount++;
         }
-
     }
 
     return ++quoteCount;
@@ -36,10 +34,8 @@ int getLength(FILE* fileHandle) {
     int lineCount = 0;
     char c;
     while ((c = fgetc(handle)) != EOF) {
-
         if (c == '\n') 
             lineCount++;
-
     }
 
     return lineCount;
