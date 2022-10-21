@@ -16,4 +16,9 @@ jobs:
      
       - name: Open Test Folder
         run: cd test
-      
+        
+      - name: Compile Test
+        run: gcc -o test.out testMain.c CuTest.c ../src/csvreader.c suite.c
+        
+      - name: Run Test
+        run: ./test.out
