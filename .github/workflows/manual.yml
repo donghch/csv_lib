@@ -13,13 +13,13 @@ jobs:
     steps:
       - name: CheckOut
         uses: actions/checkout@v2
-
-      - name: List Folders
-        run: ls
      
       - name: Open Test Folder
         run: cd test
         
+      - name: List files
+        run: ls
+
       - name: Compile Test
         run: gcc -o test.out testMain.c CuTest.c ../src/csvreader.c suite.c
         
