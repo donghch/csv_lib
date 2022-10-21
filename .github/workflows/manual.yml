@@ -1,0 +1,10 @@
+name: Start Tests
+on: push
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Open Test Folder
+      run: cd ../../../test
+      
