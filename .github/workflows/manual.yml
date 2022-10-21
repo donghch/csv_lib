@@ -17,7 +17,7 @@ jobs:
         run: ls
 
       - name: Compile Test
-        run: gcc -o test/test.out test/testMain.c test/CuTest.c src/csvreader.c test/suite.c
+        run: gcc -o test.out test/testMain.c test/CuTest.c src/csvreader.c test/suite.c
         
       - name: Run Test
-        run: .test/test.out
+        run: ./test.out
