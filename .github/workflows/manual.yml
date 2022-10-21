@@ -1,10 +1,19 @@
 name: Start Tests
 on: push
 
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
 jobs:
   test_job:
+    name: Compile Tests
     runs-on: ubuntu-latest
     steps:
-    - name: Open Test Folder
-      run: cd test
+      - name: CheckOut
+      - uses: actions/checkout@v2
+     
+      - name: Open Test Folder
+      - run: cd test
       
